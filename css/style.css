@@ -686,7 +686,7 @@ input, button {
         order: 2;
         flex: none;
         padding-top: 0;
-        overflow: auto;
+        overflow: hidden;
         max-height: 100%;
         gap: 40px;
         display: flex;
