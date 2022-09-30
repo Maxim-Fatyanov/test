@@ -753,6 +753,7 @@ input, button {
 
     .footer-bottom nav {
         gap: 20px;
+        align-items: center;
         flex-direction: row;
     }
 
