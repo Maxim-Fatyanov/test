@@ -6,58 +6,287 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500&display=swap" rel="stylesheet">
-
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@500;600;700&family=IBM+Plex+Sans&family=Montserrat:wght@600&family=Nunito+Sans&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- styles -->
-    <link rel="stylesheet" href="./style.css">
-    
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <title>Сибэкотехника</title>
 </head>
 <body>
-    <div class="container" style="padding-top: 100px">
-        <div class="card-company">
-            <div class="card-company__img">
-                <img src="./img/card-company.jpg" alt="card-company">
-            </div>
-            <div class="card-company__content">
-                <div class="card-company__title-wrapper">
-                    <div class="card-company__title">Название компании</div>
+    <div class="banner">
+        <div class="container">
+            <header class="header">
+                <a class="header__logo" href="#"><img class="header__logo-img" src="./images/logo.svg" alt="logo"></a>
+                <div class="header__button-menu"></div>
+                <nav class="header__nav">
+                    <a class="header__link header__link_active" href="#">главная</a>
+                    <a class="header__link" href="#">услуги</a>
+                    <a class="header__link" href="#">о нас</a>
+                    <a class="header__link" href="#">контакты</a>
+                </nav>
+                <div class="header__button-wrapper button-transparent__wrapper">
+                    <button class="header__button button-transparent">заказать звонок</button>
                 </div>
-                <div class="card-company__subtitle">Сфера деятельности</div>
-                <div class="card-company__text card-company__text_blur">Не следует, однако забывать, что рамки и место обучения кадров в значительной степени обуславливает создание модели развития. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров представляет собой интересный эксперимент проверки дальнейших направлений развития.</div>
-            </div>
-            <div class="card-company__contacts">
-                <div class="card-company__icon">
-                    <img src="./img/icon-eye-invisible.svg" alt="eye-invisible">
-                </div>
-                <div class="card-company__text">Контакты доступны только для зарегистрированных крюинговых агентств или судовладельцев.</div>
-                <a href="" class="card-company__link">Зерегистрироваться</a>
+            </header>
+        </div>
+    </div>
+
+    <div class="to-form">
+        <div class="container">
+            <div class="to-form__content">
+                <h1 class="to-form__title h1">Снижая вредные выбросы, повышаем прибыль!</h1>
+                <div class="to-form__button"><button class="button_gradient">Начать работу</button></div>
             </div>
         </div>
-        <div class="card-company">
-            <div class="card-company__img">
-                <img src="./img/card-company.jpg" alt="card-company">
+    </div>
+
+    <section class="about">
+        <div class="about__container container">
+            <h1 class="about__title h1">О компании</h1>
+            <div class="about__content">
+                <p class="about__text text">В настоящее время наше предприятие имеет опыт работы с суспензионным угольным топливом, получаемым на основе различных марок углей (от бурых до антрацитов)  и угольных шламов с зольностью до 50%.</p>
+                <p class="about__text text">Технологии утилизации тонкодисперсных угольных шламов путем приготовления и прямого сжигания в котлах котельных суспензионного угольного топлива (ВУТ) относятся к российским инновациям в угольной энергетике.</p>
+                <p class="about__text text">Нашим предприятием осуществляется полный цикл работ от проведения научно-исследовательских работ, разработки технологических регламентов, проектно-конструкторской и сметной документации до пуско-наладочных работ при вводе в эксплуатацию создаваемых технологических комплексов с обучением эксплуатационного персонала. В качестве генерального подрядчика Предприятие реализует разработанные проекты технологических комплексов «под ключ».</p>
             </div>
-            <div class="card-company__content">
-                <div class="card-company__title-wrapper">
-                    <div class="card-company__title">Название компании</div>
+            <div class="about__logo"><img src="./images/about/logo.svg" alt="logo"></div>
+        </div>
+    </section>
+
+    <section class="activity">
+        <div class="activity__container container">
+            <div class="activity__box-title">
+                <h1 class="activity__title h1">Предприятие осуществляет следующие виды деятельности:</h1>
+                <a href="#" class="activity__link"><img src="./images/arrow.svg" alt="arrow"></a>
+            </div>
+            <div class="activity__list-wrapper">
+                <div class="activity__list">
+                    <div class="card-activity">
+                        <img class="card-activity__img" src="./images/activity/img-1.jpg" alt="img">
+                        <p class="card-activity__text">Разработка и внедрение экологически чистых технологий переработки и сжигания угля;</p>
+                        <a href="#" class="card-activity__more">подробнее</a>
+                    </div>
+                    <div class="card-activity">
+                        <img class="card-activity__img" src="./images/activity/img-2.jpg" alt="img">
+                        <p class="card-activity__text">Проведение научно-исследовательских, проектно-конструкторских и пусконаладочных работ по созданию предприятий приготовления, гидротранспорта и использования композиционного водоугольного топлива, переработки и брикетирования угля;</p>
+                        <a href="#" class="card-activity__more">подробнее</a>
+                    </div>
+                    <div class="card-activity">
+                        <img class="card-activity__img" src="./images/activity/img-3.jpg" alt="img">
+                        <p class="card-activity__text">Перевод на сжигание композиционного водоугольного топлива теплогенерирующих установок (промышленных и бытовых котельных, ТЭЦ и других) со снижением экологически вредных выбросов;</p>
+                        <a href="#" class="card-activity__more">подробнее</a>
+                    </div>
+                    <div class="card-activity">
+                        <img class="card-activity__img" src="./images/activity/img-3.jpg" alt="img">
+                        <p class="card-activity__text">Разработка и внедрение экологически чистых технологий и оборудования по утилизации промышленных и  бытовых отходов;</p>
+                        <a href="#" class="card-activity__more">подробнее</a>
+                    </div>
+                    <div class="card-activity">
+                        <img class="card-activity__img" src="./images/activity/img-2.jpg" alt="img">
+                        <p class="card-activity__text">Проведение научно-исследовательских, проектно-конструкторских и пусконаладочных работ по созданию предприятий приготовления, гидротранспорта и использования композиционного водоугольного топлива, переработки и брикетирования угля;</p>
+                        <a href="#" class="card-activity__more">подробнее</a>
+                    </div>
+                    <div class="card-activity">
+                        <img class="card-activity__img" src="./images/activity/img-3.jpg" alt="img">
+                        <p class="card-activity__text">Перевод на сжигание композиционного водоугольного топлива теплогенерирующих установок (промышленных и бытовых котельных, ТЭЦ и других) со снижением экологически вредных выбросов;</p>
+                        <a href="#" class="card-activity__more">подробнее</a>
+                    </div>
+                    <div class="card-activity">
+                        <img class="card-activity__img" src="./images/activity/img-3.jpg" alt="img">
+                        <p class="card-activity__text">Разработка и внедрение экологически чистых технологий и оборудования по утилизации промышленных и  бытовых отходов;</p>
+                        <a href="#" class="card-activity__more">подробнее</a>
+                    </div>
                 </div>
-                <div class="card-company__subtitle">Сфера деятельности</div>
-                <div class="card-company__text card-company__text_blur">Не следует, однако забывать, что рамки и место обучения кадров в значительной степени обуславливает создание модели развития. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров представляет собой интересный эксперимент проверки дальнейших направлений развития.</div>
             </div>
-            <div class="card-company__contacts">
-                <div class="card-company__subtitle">Контакты</div>
-                <div class="address-links">
-                    <a class="address-links__link" href="tel:+70000000000">+7 (000) 000-00-00</a>
-                    <a class="address-links__link" href="mailto:name@email.ru">name@email.ru</a>
-                    <a class="address-links__link" href="https://www.name_company.com">https://www.name_company.com</a>
+        </div>
+    </section>
+
+    <div class="resume">
+        <div class="container">
+            <div class="resume__body">
+                <div class="resume__background"></div>
+                <div class="resume__content">
+                    <div class="resume__item-wrapper resume__item-wrapper_right">
+                        <div class="resume__item resume__item_italic">Основным продуктом, разработанным предприятием является новый вид жидкого топлива из угля – суспензионное угольное топливо (ВУТ), состоящее из мелкодисперсной смеси угля, воды и реагента-пластификатора.</div>
+                    </div>
+                    <div class="resume__item-wrapper resume__item-wrapper_left">
+                        <div class="resume__item">
+                            <div class="h2">Применение ВУТ</div>
+                            <div class="text">Позволяет существенно улучшить экологию в районах действия котельной, уровень вредных выбросов в атмосферу (пыли, оксидов азота, бенз(а)пирена, двуокиси серы) существенно меньший предельно допустимых значений;</div>
+                        </div>
+                    </div>
+                    <div class="resume__item-wrapper resume__item-wrapper_right">
+                        <div class="resume__item">
+                            <div class="text">Способствует полному, комплексному использованию угля, добытого на шахтах и разрезах и переработанного на обогатительных фабриках.</div>
+                        </div>
+                    </div>
+                    <div class="resume__item-wrapper resume__item-wrapper_left resume__item-wrapper_last">
+                        <div class="resume__item">
+                            <div class="text">Способствует решению задач по повышению энергоэффективности, ресурсосбережению и рациональному природопользованию за счет экологически чистой утилизации образованных и образующихся отходов углеобогащения с освобождением значительных территорий, занятых гидроотвалами и отстойниками и использования образующейся золы в строительной индустрии</div>
+                        </div>
+                    </div>
+                    <a href="#" class="resume__button">Начать работу</a>
+                </div>
+            </div>
+            <section class="what-can">
+                <div class="what-can__content">
+                    <h1 class="what-can__title h1">Мы сможем реализовать проект любой сложности благодаря наличию:</h1>
+                    <ul class="what-can__list">
+                        <li class="what-can__item">Собственной производственной базы</li>
+                        <li class="what-can__item">Отдела строительства и монтажа</li>
+                        <li class="what-can__item">Собственного конструкторского отдела</li>
+                        <li class="what-can__item">Отдела испытаний и наладки</li>
+                        <li class="what-can__item">Проектного отдела</li>
+                        <li class="what-can__item">Испытательной площадки и лаборатории</li>
+                    </ul>
+                    <button class="what-can__button button_gradient" href="#">Заказать консультацию</button>
+                    <h1 class="h1">Заголовок</h1>
+                    <p class="what-can__text text">Основные технологические и технические решения, используемые при реализации проектов, защищены авторскими свидетельствами, патентами на полезные модели и изобретения РФ и системой НОУ-ХАУ. В 2009 г. предприятие получило национальную премию, учрежденную ТПП РФ в области предпринимательской деятельности «Золотой Меркурий» в номинации «Лучшее предприятие экспортер в области международного инновационного сотрудничества» и стало победителем конкурса «Лучший предприниматель Кемеровской области» в сфере инноваций</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="projects">
+        <div class="container">
+            <div class="projects__body">
+                <div class="projects__content">
+                    <h1 class="projects__title h1">Наши проекты</h1>
+                    <div class="projects-item">
+                        <img class="projects-item__img" src="./images/projects/img-1.png" alt="img">
+                        <div class="projects-item__title">Котельная ОАО «Шахта «Заречная»</div>
+                        <div class="projects-item__text">Установка по приготовлению и сжиганию суспензионного угольноко топлива на основе фильтркека.</div>
+                        <div class="projects-item__address">г. Ленинск-Кузнецкий</div>
+                        <a class="projects-item__more" href="#"><span class="projects-item__more_decoration">Подробнее</span> ></a>
+                    </div>
+                    <div class="projects-item">
+                        <img class="projects-item__img" src="./images/projects/img-2.png" alt="img">
+                        <div class="projects-item__title">Технологический коммплекс по приготовлению и сжиганию суспензионного топлива</div>
+                        <div class="projects-item__address">г. Тепиртау, Казахстан</div>
+                        <a class="projects-item__more" href="#"><span class="projects-item__more_decoration">Подробнее</span> ></a>
+                    </div>
+                    <div class="projects-item">
+                        <img class="projects-item__img" src="./images/projects/img-3.png" alt="img">
+                        <div class="projects-item__title">Пилотный комплекс приготовления и сжигания суспензионного топлива </div>
+                        <div class="projects-item__address">г. Ханой, Вьетнам</div>
+                        <a class="projects-item__more" href="#"><span class="projects-item__more_decoration">Подробнее</span> ></a>
+                    </div>
+                    <div class="projects-item">
+                        <img class="projects-item__img" src="./images/projects/img-4.png" alt="img">
+                        <div class="projects-item__title">Технологический коммплекс утилизации тонкодисперных отходов углеобонащения </div>
+                        <div class="projects-item__address">г. Междуреченск</div>
+                        <a class="projects-item__more" href="#"><span class="projects-item__more_decoration">Подробнее</span> ></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <section class="stages">
+        <div class="stages__container container">
+            <div class="stages__box-title">
+                <h1 class="h1">Этапы сотрудничества</h1>
+                <a href="#" class="activity__link"><img src="./images/arrow.svg" alt="arrow"></a>
+            </div>
+            <div class="stages__list">
+                <div class="stages-item">
+                    <div class="stages-item__number">01</div>
+                    <div class="stages-item__line"></div>
+                    <div class="stages-item__text">Запрос</div>
+                </div>
+                <div class="stages-item">
+                    <div class="stages-item__number">02</div>
+                    <div class="stages-item__line"></div>
+                    <div class="stages-item__text">Формирование технического задания</div>
+                </div>
+                <div class="stages-item">
+                    <div class="stages-item__number">03</div>
+                    <div class="stages-item__line"></div>
+                    <div class="stages-item__text">Заключение договора</div>
+                </div>
+                <div class="stages-item">
+                    <div class="stages-item__number">04</div>
+                    <div class="stages-item__line"></div>
+                    <div class="stages-item__text">Проектирование</div>
+                </div>
+                <div class="stages-item">
+                    <div class="stages-item__number">05</div>
+                    <div class="stages-item__line"></div>
+                    <div class="stages-item__text">Поставка оборудования</div>
+                </div>
+                <div class="stages-item">
+                    <div class="stages-item__number">06</div>
+                    <div class="stages-item__line"></div>
+                    <div class="stages-item__text">Монтаж и наладка</div>
+                </div>
+                <div class="stages-item">
+                    <div class="stages-item__number">07</div>
+                    <div class="stages-item__line"></div>
+                    <div class="stages-item__text">Сдача в эксплуатацию</div>
+                </div>
+            </div>
+            <button class="stages__button button_gradient">Связаться для получения консультации</button>
+        </div>
+    </section>
+
+    <div class="form">
+        <div class="form__container container">
+            <form class="form__content">
+                <h1 class="form__title h1">Остались вопросы?</h1>
+                <p class="form__text"></p>
+                <input placeholder="Ваше имя" type="text" class="form__input">
+                <input placeholder="Ваш телефон" type="text" class="form__input">
+                <div class="form__box-checkbox">
+                    <input id="data-processing" name="data-processing" class="form__checkbox" type="checkbox">
+                    <label for="data-processing" class="form__label"> я даю согласие на обработку своих персональных данных</label>
+                </div>
+                <button class="form__button button_gradient" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <div class="map">
+        <div class="container">
+            <div class="map__body"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__body">
+                <div class="footer__content">
+                    <div class="footer__address">
+                        654005, <br>
+                        Россия, Кемеровская область - Кузбасс, <br>
+                        г. Новокузнецк, ул. Хлебозаводская, д.9, корп. 2  м.т.
+                    </div>
+                    <div class="footer__phone-numbers">
+                        <a class="footer__phone-number" href="tel:+79039423630">+7 (903) 942-36-30</a>
+                        <a class="footer__phone-number" href="tel:+79039423640">+7 (903) 942-36-40</a>
+                    </div>
+                    <div class="footer__links">
+                        <a href="#"><img src="./images/footer/vk.svg" alt="vk"></a>
+                        <a href="#"><img src="./images/footer/telegram.svg" alt="telegram"></a>
+                        <a href="#"><img src="./images/footer/whatsapp.svg" alt="whatsapp"></a>
+                        <div class="button-transparent__wrapper">
+                            <button class="button-transparent">заказать звонок</button>
+                        </div>
+                    </div>
+                    <div class="footer__bottom">
+                        <a class="footer__logo" href="#"><img src="./images/footer/logo.svg" alt="logo"></a>
+                        <div class="footer__comment">Общество с ограниченной ответственностью «Научно-производственный центр «Сибэкотехника» ООО НПЦ  «Сибэкотехника»</div>
+                        <a class="footer__link" href="#">Политика использования персональных данных</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const headerButton = document.querySelector('.header__button-menu');
+        const headerNav = document.querySelector('.header__nav');
+
+        headerButton.addEventListener('click', () => headerNav.classList.toggle('header__nav_active'));
+    </script>
 </body>
 </html>
