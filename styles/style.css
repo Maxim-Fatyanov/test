@@ -50,11 +50,37 @@ input, button {
     color: #333333;
 }
 
+.h1_icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.h1_icon::before {
+    content: '';
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    background: url("../images/icon-logo.svg") no-repeat center / cover;
+}
+
 @media only screen and (min-width: 768px) {
 
     .h1 {
         font-size: 60px;
         line-height: 72px;
+    }
+
+    .h1_icon {
+        gap: 40px;
+        flex-direction: row;
+    }
+
+    .h1_icon::before {
+        min-width: 80px;
+        width: 80px;
+        height: 80px;
     }
 
     .h2 {
@@ -117,7 +143,6 @@ input, button {
     justify-content: space-between;
     align-items: center;
     background: rgba(255, 255, 255, 0.9);
-    border-bottom: 2px solid #FFFFFF;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -151,22 +176,31 @@ input, button {
 }
 
 .header__logo-img {
-    width: 80px;
+    width: 150px;
 }
 
 .header__nav {
-    height: 0;
     order: 4;
-    flex: 1 100%;
+    height: 0;
     display: flex;
-    align-items: flex-end;
     flex-direction: column;
+    align-items: flex-end;
+    flex: 1 100%;
     overflow: hidden;
     transition: height .6s;
 }
 
+.header__links {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
 .header__nav_active {
-    height: 84px;
+    height: 160px;
 }
 
 .header__link {
@@ -190,15 +224,12 @@ input, button {
 }
 
 .to-form__content {
-    padding: 20px 20px 130px;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     background-color: #ffffff;
-    background-image: url("../images/banner/to-form-img.png"), url("../images/banner/to-form-vector.svg");
-    background-position: right bottom;
-    background-repeat: no-repeat;
     background-size: 300px;
     box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2);
 }
@@ -237,10 +268,6 @@ input, button {
 
 .about__text:last-child {
     margin-bottom: 0;
-}
-
-.about__logo {
-    margin: 20px 0 0 40px;
 }
 
 .activity {
@@ -352,8 +379,32 @@ input, button {
 }
 
 .resume__background {
+    padding: 30px 0 80px;
     position: relative;
-    background: url("../images/resume/background.jpg") no-repeat center;
+    background-color: #000000;
+}
+
+.resume__title {
+    max-width: 1010px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Alumni Sans', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46px;
+    color: #FFFFFF;
+}
+
+.resume__title::before {
+    content: '';
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    background: url("../images/icon-logo-white.svg") no-repeat center / cover;
 }
 
 .resume__background::before {
@@ -382,6 +433,21 @@ input, button {
 
 .resume__item-wrapper:first-child {
     padding-right: 0;
+}
+
+.resume__item-wrapper_between {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+    padding-bottom: 60px;
+}
+
+.resume__img {
+    max-width: 500px;
+    width: 100%;
 }
 
 .resume__item-wrapper_right {
@@ -448,7 +514,7 @@ input, button {
 .what-can {
     position: relative;
     padding: 10px;
-    background: #FFFFFF url("../images/what-can/footer.png") no-repeat 85% bottom;
+    background: #FFFFFF;
     background-size: 400px;
     box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2);
 }
@@ -631,8 +697,7 @@ input, button {
     height: 120px;
     padding: 20px;
     top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 60%;
     align-items: center;
     justify-content: center;
     background: #141414;
@@ -807,13 +872,12 @@ input, button {
     background: url("../images/map/map.png") no-repeat center;
 }
 
-
 .footer {
     background-color: #fff;
 }
 
 .footer__body {
-    padding: 80px 20px 160px;
+    padding: 40px 20px 80px;
     background: #FAFAFA;
 }
 
@@ -894,11 +958,25 @@ input, button {
     color: #0031E0;
 }
 
+@media only screen and (min-width: 575px) {
+
+    .to-form__content {
+        padding: 20px 20px 60px;
+        background-image: url("../images/banner/to-form-vector.svg");
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 400px;
+    }
+}
+
 @media only screen and (min-width: 768px) {
 
     .to-form__content {
-        padding: 40px 40px 160px;
-        background-size: 600px;
+        padding: 40px 40px 80px;
+        background-image: url("../images/banner/to-form-vector.svg");
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 500px;
     }
 
     .to-form__title {
@@ -930,12 +1008,26 @@ input, button {
     }
 
     .resume__background {
-        height: 480px;
+        padding: 30px 0 160px;
+        background: url("../images/resume/background.jpg") no-repeat center / cover;
+    }
+
+    .resume__title {
+        gap: 40px;
+        flex-direction: row;
+        font-size: 48px;
+        line-height: 58px;
     }
 
     .resume__item_italic {
         font-size: 48px;
         line-height: 58px;
+    }
+
+    .resume__title::before {
+        min-width: 80px;
+        width: 80px;
+        height: 80px;
     }
 
     .what-can {
@@ -954,6 +1046,11 @@ input, button {
         padding: 80px 0 160px;
     }
 
+    .what-can__subcontent {
+        width: 50%;
+        margin-left: auto;
+    }
+
     .projects__body {
         padding: 80px 20px 160px;
     }
@@ -961,6 +1058,11 @@ input, button {
     .stages__button {
         display: block;
         margin: 130px auto 0;
+    }
+
+    .footer__body {
+        padding: 80px 20px 160px;
+        background: #FAFAFA;
     }
 
     .form__content {
@@ -982,11 +1084,10 @@ input, button {
     .header {
         flex-wrap: nowrap;
         padding: 0 30px;
-        gap: 0;
     }
 
     .header__logo-img {
-        width: 100px;
+        width: 190px;
     }
 
     .header__button-menu {
@@ -994,23 +1095,22 @@ input, button {
     }
 
     .header__nav {
+        flex: 1 1;
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+        order: 2;
+    }
+
+    .header__links {
         height: auto;
         flex-direction: row;
-        order: 2;
-        flex: none;
+        align-items: center;
         gap: 30px;
     }
 
-    .header__link {
-        padding: 20px 10px 23px;
-        border-bottom: 2px solid transparent;
-        transition: border-bottom-color .6s;
-    }
-
-    .header__link_active,
-    .header__link:hover {
-        color: #000000;
-        border-bottom-color: #0031E0;
+    .header__links {
+        margin: 0 auto;
     }
 
     .header__button {
@@ -1045,14 +1145,9 @@ input, button {
         display: flex;
     }
 
-    .what-can {
-        background-size: auto;
-    }
-
     .projects-item {
         flex: 1 calc(50% - 15px);
     }
-
 
     .form__content {
         margin: 0;
@@ -1062,14 +1157,25 @@ input, button {
 @media only screen and (min-width: 1260px) {
 
     .resume__background::after {
-        content: url("../images/resume/center.png");
+        content: url("../images/resume/center.svg");
         position: absolute;
-        top: 310px;
+        top: 100%;
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;
     }
 
+    .resume__item-wrapper_between {
+        max-width: 890px;
+        padding-bottom: 190px;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .resume__img {
+        max-width: 360px;
+        width: auto;
+    }
 
     .resume__content::before {
         content: '';
@@ -1134,26 +1240,19 @@ input, button {
     }
 
     .resume__content {
-        padding: 300px 0 160px;
+        padding: 80px 0 160px;
         background: url("../images/resume/footer.png") no-repeat bottom center;
     }
 }
 
 @media only screen and (min-width: 1440px) {
+
     .header {
         padding: 0 45px;
     }
 
-    .header__logo {
-        flex: 0 240px;
-    }
-
-    .header__nav {
+    .header__links {
         gap: 60px;
-    }
-
-    .header__link {
-        padding: 27px 10px 32px;
     }
 
     .to-form__content {
@@ -1188,6 +1287,15 @@ input, button {
 }
 
 @media only screen and (min-width: 1540px) {
+
+    .header__logo-img {
+        width: auto;
+    }
+
+    .header__link {
+        font-size: 36px;
+        line-height: 42px;
+    }
 
     .form__container,
     .stages__container,
